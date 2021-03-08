@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Rhino 3D</title>
     <link rel="shortcut icon" type="image/jpg" href="media/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="https://vjs.zencdn.net/5-unsafe/video-js.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" media="screen" />
 </head>
 
 <body>
@@ -99,9 +99,13 @@
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                 </div>
-                <a class="header-link active">Explore</a>
-                <a class="header-link">Purchase</a>
-                <a class="header-link">Upload</a>
+                <div class="header-menu">
+                    <ul>
+                        <li><a class="header-link active">Explore</a></li>
+                        <li><a class="header-link">Purchase</a></li>
+                        <li><a class="header-link">Upload</a></li>
+                    </ul>
+                </div>
                 <div class="user-settings">
                     <img class="user-img" src="media/team-brian.jpg" alt=" Brian Afande">
                     <div class="user-name">Frencho</div>
@@ -156,7 +160,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-blog anim" style="--delay: .3s;background-image: url(https://images.pexels.com/photos/3046637/pexels-photo-3046637.jpeg);" >
+                    <div class="main-blog anim"
+                        style="--delay: .3s;background-image: url(https://images.pexels.com/photos/3046637/pexels-photo-3046637.jpeg);">
                         <div class="main-blog__title">Swimming Tips You need to know</div>
                         <div class="main-blog__author tips">
                             <div class="main-blog__time">7 min</div>

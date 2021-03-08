@@ -215,24 +215,46 @@ body:before {
   padding: 30px;
 }
 
+.header-menu {
+  margin: 0 10px;
+}
+.header-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header-menu ul li {
+  flex: 3;
+}
+
+@media all and (max-width: 1000px) {
+  .header-menu ul {
+    flex-wrap: wrap;
+  }
+  .header-menu li {
+    flex: 1 1 50%;
+  }
+}
 .header-link {
-  color: #9b9ca7;
+  color: #fff;
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px 16px;
   transition: 0.3s;
-  border-bottom: 3px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: 0.3s;
+  padding: 5px 20px;
 }
 .header-link svg {
   width: 20px;
   margin-right: 14px;
 }
 .header-link.active, .header-link.hover {
-  background: #11132c;
+  background: #ff7551;
   border-bottom: 3px solid #4255d4;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .search-bar {

@@ -219,25 +219,47 @@ body {
   flex-shrink: 0;
   padding: 30px;
 }
-.header-link {
-    color: #9b9ca7;
-    text-decoration: none;
+.header-menu {
+  margin: 0 10px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
-    padding: 20px;
-    transition: 0.3s;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s;
-    svg{
-        width: 20px;
-        margin-right: 14px;
-    }
-    &.active, &.hover{
-        background: #11132c;
-        border-bottom: 3px solid #4255d4;
-        border-radius: 10px;
+    li {
+      flex: 3;
     }
   }
+}
+@media all and (max-width: 1000px) { 
+    .header-menu{
+        ul { flex-wrap: wrap; }
+        li{
+            flex: 1 1 50%;
+        }
+    }
+    }
+.header-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+  padding: 5px 20px;
+  svg {
+    width: 20px;
+    margin-right: 14px;
+  }
+  &.active,
+  &.hover {
+    background: #ff7551;
+    border-bottom: 3px solid #4255d4;
+    border-radius: 8px;
+  }
+}
 
 .search-bar {
   height: 34px;
@@ -324,12 +346,12 @@ body {
   overflow: auto;
 }
 .main-container {
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px 30px;
-    flex-grow: 1;
-    overflow: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 30px;
+  flex-grow: 1;
+  overflow: auto;
+}
 
 .anim {
   animation: bottom 0.8s var(--delay) both;
@@ -506,15 +528,15 @@ body {
 }
 
 .vertical-videos {
-    display: grid;
-    width: 100%;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  @media screen and (max-width: 980px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    @media screen and (max-width: 980px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
   }
+}
 .video {
   position: relative;
   background-color: var(--video-bg);
